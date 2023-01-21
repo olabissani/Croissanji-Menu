@@ -1,0 +1,773 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+        color: white;
+        background-color: gray;
+    }
+    table{
+        width: 100%;
+    }
+    img{
+        height: 80px;
+    }
+    .tap-image{
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        transition: width 2s;
+        display: none; 
+        height: 20px;
+        background-color: #514D4D;
+        text-align: center;
+        width: 100%;
+        font-size: large;
+        font-weight: bold;
+    }
+    .img-clicked{
+        position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      transition: width 2s;
+    }
+    td:nth-child(1) { 
+        width: 90px;
+     }
+    td:nth-child(2) { 
+        text-align: left;
+     }
+     td:nth-child(3) { 
+        text-align: right;
+     }
+/* .card p,.card h4 {
+  
+  color: #514D4D!important;
+} */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  /* width: 40%; */
+  border-radius: 5px;
+  /* color: #514D4D!important; */
+  background-color: #514D4D;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+
+<script type="text/javascript">
+
+    window.onload = function() {
+    alert("ola")
+var images=document.getElementsByTagName('img');
+    for (var i = 0 ; i < images.length; i++) {
+        images[i].addEventListener('click', function (e) {
+            var img=document.elementFromPoint(e.clientX, e.clientY);
+            if(!img.classList.contains("img-clicked"))
+            {
+                img.classList.add("img-clicked");
+
+                document.getElementById("tap_image").style.display="unset";
+            }
+            else{
+                img.classList.remove("img-clicked");
+
+                document.getElementById("tap_image").style.display="none";
+            }
+        console.log(e)
+      });
+}
+      
+    
+    };
+    
+    </script>
+      <h1>
+        Menu
+    </h1>
+  </head>
+  <body>
+<div class="tap-image" id="tap_image">
+    Tap image to close.
+</div>
+<table>
+    <tr>
+        <td>
+            <h2>
+                Breakfast
+            </h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>JIBNEH</br>
+        جبنة
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>30,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>ZAATAR</br>
+        زعتر
+        
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>30,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>JIBNEH & ZAYTOUN </br>
+        جبنة و زيتون 
+        
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>30,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>MARTADELLA & JIBNEH</br>
+        جبنة و مرتديلا
+        
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>30,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>PIZZA</br>
+        بيتزا
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>30,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>CHOCOLATE</br>
+        شوكولا
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>30,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>CHOCOLATE EXTRA</br>
+        شوكولا اكستر
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>55,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>TURKEY & CHEESE</br>
+        حبش و جبنة
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>90,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>GRILLED HALLOUM & PESTO</br>
+        حلوم مشوي مع بستو
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>85,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>LABNEH</br>
+        لبنة
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>55,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Cheese" >
+</td>
+<td>
+<div class="container">
+    <h4><b>OMLETTE</br>
+        بيض
+        
+</b></h4> 
+     
+  </div>
+</td>
+<td>
+<p><b>55,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+    
+
+    <tr>
+        <td>
+            <h2>
+                Dinner Chicken
+            </h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Fajita" >
+</td>
+<td>
+<div class="container">
+    <h4><b>FAJITA</br>
+فاهيتا 
+</b></h4> 
+    <p>mushroom, onions, green peppers, mozzarella cheese, guacamole sauce, lettuce, mayo</br>
+فطر ، بصل ، فليفلة خضراء ، جبنة موزاريلا ، صلصة جواكامولي ، خس ، مايونيز
+</p> 
+  </div>
+</td>
+<td>
+<p><b>180,000L.L.</b></p>
+</td>
+</tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+<td>
+<img src="R.jpg" alt="Chicken BBQ" >
+</td>
+<td>
+<div class="container">
+    <h4><b>CHICKEN BARBECUE</br>
+        تشكن باربكيو
+
+</b></h4> 
+    <p>
+        lettuce, pickles, mayo, chips, BBQ sauce</br>
+        خس ، كبيس ، مايونيز ، شيبس ، صوص باربيكيو        
+</p> 
+  </div>
+</td>
+<td>
+<p><b>160,000L.L.</b></p>
+</td>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+           <div class="card">
+<table>
+<tr>
+    <td>
+    <img src="R.jpg" alt="Chicken Sub" >
+    </td>
+    <td>
+    <div class="container">
+        <h4><b>CHICKEN SUB</br>
+            تشكن ساب         
+    
+    </b></h4> 
+        <p>
+            lettuce, pickles, mayo, corn, soy sauce, mozzarella cheese</br>
+خس ، كبيس ، مايونيز ، ذرة ، صلصة الصويا ، جبنة موزاريلا
+        
+    </p> 
+      </div>
+    </td>
+    <td>
+    <p><b>145,000L.L.</b></p>
+    </td>
+    </tr>
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+           <div class="card">
+<table>
+    <tr>
+        <td>
+        <img src="R.jpg" alt="Chicken Catalina" >
+        </td>
+        <td>
+        <div class="container">
+            <h4><b>CHICKEN CATALINA</br>
+                تشكن كاتالينا
+                
+        
+        </b></h4> 
+            <p>
+                lettuce, pickles, mayo</br>
+خس ، كبيس ، مايونيز
+        
+        </p> 
+          </div>
+        </td>
+        <td>
+        <p><b>140,000L.L.</b></p>
+        </td>
+        </tr>
+    </table>
+  
+  
+</div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+           <div class="card">
+<table>
+        <tr>
+            <td>
+            <img src="R.jpg" alt="Pepito" >
+            </td>
+            <td>
+            <div class="container">
+                <h4><b>PEPITO</br>
+                    بيبيتو
+                    
+            </b></h4> 
+                <p>
+                    turkey, mozzarella cheese, mustard, ketchup, mayo, BBQ sauce, Guasacaca sauce, lettuce</br>
+حبش ، جبنة موزاريلا ، خردل ، كاتشب ، مايونيز ، صوص باربيكيو ، صلصة جواساكاكا ، خس
+        
+            </p> 
+              </div>
+            </td>
+            <td>
+            <p><b>200,000L.L.</b></p>
+            </td>
+            </tr>
+        </table>
+  
+  
+    </div>
+            </td>
+        </tr>
+    
+       
+            <tr>
+                <td>
+                    <h2>
+                        Dinner Beef
+                    </h2>
+                </td>
+            </tr>
+        
+    
+        <tr>
+            <td>
+               <div class="card">
+    <table>
+            <tr>
+                <td>
+                <img src="R.jpg" alt="Sojok" >
+                </td>
+                <td>
+                <div class="container">
+                    <h4><b>SOJOK</br>
+                        سجق
+                        
+                </b></h4> 
+                    <p>
+                        tomato, pickles, mayo mustard, lettuce</br>
+بندورة ، كبيس ، مايونيز خردل ، خس
+        
+                </p> 
+                  </div>
+                </td>
+                <td>
+                <p><b>130,000L.L.</b></p>
+                </td>
+                </tr>
+            </table>
+  
+  
+        </div>
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                   <div class="card">
+        <table>
+                <tr>
+                    <td>
+                    <img src="R.jpg" alt="Philly" >
+                    </td>
+                    <td>
+                    <div class="container">
+                        <h4><b>PHILADELPHIA</br>
+                            فلدلفيا
+                           
+                    </b></h4> 
+                        <p>
+                            onions, mushroom, green peppers, mozzarella cheese, lettuce, mayo</br>
+بصل ، فطر ، فليفلة خضراء ، جبنة موزاريلا ، خس ، مايونيز
+        
+                    </p> 
+                      </div>
+                    </td>
+                    <td>
+                    <p><b>180,000L.L.</b></p>
+                    </td>
+                    </tr>
+                </table>
+  
+  
+            </div>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                       <div class="card">
+            <table>
+                    <tr>
+                        <td>
+                        <img src="R.jpg" alt="Kafta" >
+                        </td>
+                        <td>
+                        <div class="container">
+                            <h4><b>KAFTA</br>
+                                كفتة                                
+                        
+                        </b></h4> 
+                            <p>
+                                Grilled onions, grilled tomato, pickles, mayo</br>
+بصل مشوي، بندورة مشوية، كبيس، مايونيز
+        
+                        </p> 
+                          </div>
+                        </td>
+                        <td>
+                        <p><b>200,000L.L.</b></p>
+                        </td>
+                        </tr>
+                    </table>
+  
+  
+                </div>
+                        </td>
+                    </tr>
+                
+                        <tr>
+                            <td>
+                                <h2>
+                                    Burgers
+                                </h2>
+                            </td>
+                        </tr>
+                    
+                
+                    <tr>
+                        <td>
+                           <div class="card">
+                <table>
+                        <tr>
+                            <td>
+                            <img src="R.jpg" alt="Chicken Basil" >
+                            </td>
+                            <td>
+                            <div class="container">
+                                <h4><b>CHICKEN BASIL BURGER</br>
+                                    برغر دجاج بالحبق
+                                    
+                            
+                            </b></h4> 
+                                <p>
+                                    basil, iceberg, pickles, mayo</br>
+حبق ، خس ، كبيس ، مايونيز 
+        
+                            </p> 
+                              </div>
+                            </td>
+                            <td>
+                            <p><b>145,000L.L.</b></p>
+                            </td>
+                            </tr>
+                        </table>
+  
+  
+                    </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                               <div class="card">
+                    <table>
+                            <tr>
+                                <td>
+                                <img src="R.jpg" alt="Beef Burger" >
+                                </td>
+                                <td>
+                                <div class="container">
+                                    <h4><b>BEEF BURGER</br>
+                                        برغر لحمة
+                                        
+                                
+                                </b></h4> 
+                                    <p>
+                                        iceberg, tomato, onions, cheddar cheese, cocktail sauce</br>
+خس ، بندورة ، بصل ، جبنة شيدر ، صوص كوكتيل
+        
+                                </p> 
+                                  </div>
+                                </td>
+                                <td>
+                                <p><b>155,000L.L.</b></p>
+                                </td>
+                                </tr>
+
+</table>
+  
+  
+</div>
+        </td>
+    </tr>
+</table>
+  </body>
+</html>
